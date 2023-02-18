@@ -374,4 +374,22 @@ class Post {
             "body": "enim aspernatur illo distinctio quae praesentium\nbeatae alias amet delectus qui voluptate distinctio\nodit sint accusantium autem omnis\nquo molestiae omnis ea eveniet optio"
             }]
     }
+   postsUsuario(identificador){
+    let aux;
+    for(let i=0;i<=this.datos.length;i++){
+        if(this.datos[i].userId == identificador){
+            aux += this.datos[i];
+        }
+    }
+    return aux;
+   }
+   idPublicacion(identificador){
+    let aux;
+    for(let i=0;i<=this.datos.length;i++){
+        if(this.datos[i].id == identificador){
+            return this.datos[i];
+        }
+    }
+    return;
+   }
 }
