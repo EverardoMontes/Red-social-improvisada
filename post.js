@@ -390,6 +390,6 @@ class Post {
             return this.datos[i];
         }
     }
-    return;
+    return ;
    }
 }
