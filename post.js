@@ -1,3 +1,4 @@
+
 class Post {
     constructor(){
         this.datos = [
@@ -374,11 +375,17 @@ class Post {
             "body": "enim aspernatur illo distinctio quae praesentium\nbeatae alias amet delectus qui voluptate distinctio\nodit sint accusantium autem omnis\nquo molestiae omnis ea eveniet optio"
             }]
     }
-   postsUsuario(identificador){
+   postsUsuario(id){
     let aux;
+    let contador = 0;
     for(let i=0;i<=this.datos.length;i++){
-        if(this.datos[i].userId == identificador){
-            aux += this.datos[i];
+        if(this.datos[i]!=undefined){
+            if(this.datos[i].userId == id){
+                aux += this.datos[i];
+            }
+        }
+        else{
+            return aux;
         }
     }
     return aux;
@@ -389,7 +396,16 @@ class Post {
         if(this.datos[i].id == identificador){
             return this.datos[i];
         }
+        if(this.datos[i]!=undefined){
+            
+        }
     }
     return ;
    }
 }
+// FUNCIONA Y COMPROBADO
+/*
+let bdPosts = new Post();
+console.log(bdPosts.postsUsuario(7));
+console.log(bdPosts.idPublicacion(38));
+*/

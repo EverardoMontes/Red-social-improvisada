@@ -10,11 +10,11 @@
     <title>ButtBook</title>
 </head>
 <body>
+    <h1>ButtBook</h1>
+    <h2>Red social mega chikiwaw</h2>
+    <br>
+    <h3>Datos básicos:</h3>
     <form action="">
-        <h1>ButtBook</h1>
-        <h2>Red social mega chikiwaw</h2>
-        <br>
-        <h3>Datos básicos:</h3>
         <label for="name">Nombre:</label>
         <input type="text" id="name">
         <br>
@@ -65,15 +65,23 @@
         <input type="text" id="name">
         <br>
         <button id="agregar">Agregar usuario</button>
-        <button>Buscar usuario por Username</button>
+    </form>
+        <button id="buscarUser">Buscar usuario por Username</button>
+        <input type="text" placeholder="Buscar por Username" id="userABuscar">
         <button>Listar usuarios</button>
         <select name="publicaciones" id="">Ver todas las publicaciones de Usuario:</select>
-    </form>
 </body>
-<script>
-    let agregar = document.getElementById("agregar");
-agregar.addEventListener("onclick", ()=>{
-
-})
-</script>
+        <script>
+            let agregar = document.getElementById("agregar");
+        agregar.addEventListener("onclick", ()=>{
+            
+        })
+            let buscarUser = document.getElementById("buscarUser");
+        buscarUser.addEventListener("onclick", ()=>{
+            /*console.log("pepe");
+            let user = document.getElementById("userABuscar").value;
+            console.log(bdUsers.buscarUsuario(user));*/
+        })
+        
+        </script>
 </html>
