@@ -196,20 +196,11 @@ class Usuario{
       return null;
     }
     listar(){
-      let aux = "";
-      for(let i=0; i<=this.datos.length; i++){
-        if(this.datos[i]!= undefined){
-          aux += this.datos[i] + " ";
-        }
-        else{
-          return aux;
-        }
-      }
-      return aux;
+     return this.datos;
     }
 }
 //Todo esto para probar que ya funciona esta parte del código
-/*
+
 let bdUsers = new Usuario();
 console.log(bdUsers.datos[1]);
 console.log("El ultimo id es: "+bdUsers.buscarUltimoId());
@@ -240,4 +231,3 @@ bdUsers.agregarUsuario(nuevo);
 console.log("El ultimo id es: "+bdUsers.buscarUltimoId());
 console.log(bdUsers.buscarUsuario("les"));
 console.log(bdUsers.listar());
-*/
