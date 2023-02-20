@@ -171,9 +171,14 @@ class Usuario{
       let aux;
       for(let i=0; i<=this.datos.length; i++){
         aux = Number(this.datos[i].id);
-        if (aux<Number(this.datos[i+1].id)) {
-          aux = Number(this.datos[i+1].id);
-        } 
+        if(this.datos[i+1]!=undefined){
+          if (aux<Number(this.datos[i+1].id)) {
+            aux = Number(this.datos[i+1].id);
+          }
+        }
+        else{
+          return aux;
+        }
       }
       return aux;
       
@@ -184,9 +189,55 @@ class Usuario{
         if(this.datos[i].username == usuarionombre){
           //return "Id :" + this.datos[i].id + "Nombre :" + this.datos[i].name +"Nombre Usuario :" + this.datos[i].username +"Email :" + this.datos[i].email +"Direccion :" + this.datos[i].address +"Calle :" + this.datos[i].street +"Suite :" + this.datos[i].suite + "Ciudad :" + this.datos[i].city + "zipcode :" + this.datos[i].zipcode + "Geo :" + this.datos[i].geo + "Lat :" + this.datos[i].lat +"Lng :" + this.datos[i].lng + "telefono :" + this.datos[i].phone + "Sitio web :" + this.datos[i].website + "Nombre compañía :" + this.datos[i].id +
           return this.datos[i];
+          //O ACASO REGRESAMOS LA POSICIÓN??? ES DECIR I
         }
       }
      
       return null;
     }
+    listar(){
+      let aux = "";
+      for(let i=0; i<=this.datos.length; i++){
+        if(this.datos[i]!= undefined){
+          aux += this.datos[i] + " ";
+        }
+        else{
+          return aux;
+        }
+      }
+      return aux;
+    }
 }
+//Todo esto para probar que ya funciona esta parte del código
+/*
+let bdUsers = new Usuario();
+console.log(bdUsers.datos[1]);
+console.log("El ultimo id es: "+bdUsers.buscarUltimoId());
+let nuevo = {
+  "id": " ",
+  "name": "asd asd",
+  "username": "les",
+  "email": "Ter@billy.biz",
+  "address": {
+  "street": "Rex Trail",
+  "suite": "S0",
+  "city": "Howemouth",
+  "zipcode": "58099",
+  "geo": {
+  "lat": "2418",
+  "lng": "214"
+  }
+  },
+  "phone": "210.32",
+  "website": "els.io",
+  "company": {
+  "name": "Joup",
+  "catchPhrase": "Configurask-force",
+  "bs": "generate elers"
+  }
+  };
+bdUsers.agregarUsuario(nuevo);
+console.log("El ultimo id es: "+bdUsers.buscarUltimoId());
+console.log(bdUsers.buscarUsuario("les"));
+console.log(bdUsers.listar());
+*/
