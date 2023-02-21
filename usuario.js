@@ -164,6 +164,7 @@ class Usuario{
         } ]; 
     }
     agregarUsuario(nuevo){
+      nuevo.id = "";
       nuevo.id = Number(this.buscarUltimoId()+1);
       this.datos.push(nuevo);
     }
@@ -184,7 +185,6 @@ class Usuario{
       
     }
     buscarUsuario(usuarionombre){
-      let aux;
       for(let i=0;i<=this.datos.length;i++){
         if(this.datos[i].username == usuarionombre){
           //return "Id :" + this.datos[i].id + "Nombre :" + this.datos[i].name +"Nombre Usuario :" + this.datos[i].username +"Email :" + this.datos[i].email +"Direccion :" + this.datos[i].address +"Calle :" + this.datos[i].street +"Suite :" + this.datos[i].suite + "Ciudad :" + this.datos[i].city + "zipcode :" + this.datos[i].zipcode + "Geo :" + this.datos[i].geo + "Lat :" + this.datos[i].lat +"Lng :" + this.datos[i].lng + "telefono :" + this.datos[i].phone + "Sitio web :" + this.datos[i].website + "Nombre compañía :" + this.datos[i].id +
@@ -231,3 +231,4 @@ bdUsers.agregarUsuario(nuevo);
 console.log("El ultimo id es: "+bdUsers.buscarUltimoId());
 console.log(bdUsers.buscarUsuario("les"));
 console.log(bdUsers.listar());
+
