@@ -6,26 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./post.js"></script>
     <script src="./usuario.js"></script>
+    <link rel="shortcut icon" href="./descarga.png" type="image/x-icon">
     <title>Red Social</title>
 </head>
 <body>
-    <header><h1>FootBook</h1></header>
+    <header><h1>RED SOCIAL MEGA PERRUKI</h1></header>
     <menu>
-        <button>Agregar Usuario</button>
-        <button>Buscar Usuario</button>
-        <button>Agregar Publicación</button>
-        <button>Buscar Publicación</button>
+        <ul>
+            <li ><a href="" class="volver">Agregar Usuario</a></li>
+            <li><a href="">Buscar Usuario</a></li>
+            <li><a href="">Listar Usuarios</a></li>
+            <li><a href="">Consultar Publicaciones de usuario específico</a></li>
+        </ul>
     </menu>
-    <section>
-        <div>
-
-        </div>
-    </section>
-    <form action=""></form>
-    <div>
-        <label for="cargarPub">Cargar publicaciones de un usuario</label>
-        <select name="" id="cargarPub"></select>
+    <div id="contenido">
+        <!-- hidden -->
+        <section>
+            <form action="">
+                <h2>Ingresa tus datos:</h2>
+                <!-- falta id, pero ese se agrega en datos -->
+                <label for="username">Usuario:</label>
+                <input type="text" id="username">
+                <br>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name">
+                <br>
+                <label for="email">Correo:</label>
+                <input type="email" id="email">
+                <br>
+                <label for="name">Sitio Web:</label>
+                <input type="text" id="name">
+                <br>
+                <label for="username">Edad:</label>
+                <input type="number" id="username">
+                <br>
+                <button>Agregar Usuario</button>
+            </form>
+        </section>
+        <section>
+            <form action="">
+                <h2>Datos de usuario:</h2>
+                <!-- falta id, pero ese se agrega en datos -->
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" readonly>
+                <br>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" readonly>
+                <br>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" readonly>
+                <br>
+                <label for="web">Sitio Web:</label>
+                <input type="url" id="web" readonly>
+                <br>
+                <label for="age">Edad:</label>
+                <input type="number" id="age" readonly>
+                <br>
+                <button id="btnVolver">Volver</button>
+               
+            </form>
+        </section>
+        <section>
+            <h2>Listado de usuarios:</h2>
+            <div id="tblListadoUsers">
+                <table>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Sitio Web</th>
+                        <th>Edad</th>
+                        
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section>
+            <div>
+                <label for="cargarPub">Cargar publicaciones de un usuario</label>
+                <select name="" id="cargarPub"></select>
+            </div>
+        </section>
     </div>
-    <footer></footer>
+    <footer>
+        <img src="./descarga.png" alt="">
+        <br>
+        <p> el futer es básicamente lo siguiente: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor velit deserunt quis magni possimus autem omnis saepe aspernatur laboriosam tempora maiores qui dolorum, quam quae aut adipisci minus molestiae sed.</p>
+    </footer>
 </body>
+<script>
+    let volver = document.getElementsByClassName("volver");
+    volver.addEventListener("click", ()=>{
+        let body = document.getElementById("contenido");
+        body.setAttribute("hidden","");
+        
+    });
+</script>
 </html>
