@@ -197,8 +197,24 @@
             usersExistentes.innerHTML+= 
             '<option value="'+ element.id + '">'+element.username+'</option>'
         });
-        selector.addEventListener("click", () =>{
+        let cargarPub = document.getElementById("cargarPub");
+        cargarPub.addEventListener("change", ()=>{
+            let tablaPublis = document.getElementById("publicaciones");
+            tablaPublis.innerHTML="<tr>"
+                +"<th>Título</th>"
+                +"<th>Contenido</th>"
+                +"</tr>"
+            let valor = cargarPub.value;
+            let publis = bdPosts.postsUsuario(valor);
+            publis.forEach(element => {
+                tablaPublis.innerHTML+="<tr>"
+                +"<td>"+ element.title+"</td>"
+                +"<td>"+ element.body+"</td>"
+                +"</tr>"
+            })
         });
+
+
     });
 </script>
 </html>

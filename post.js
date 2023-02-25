@@ -376,11 +376,11 @@ class Post {
             }]
     }
    postsUsuario(id){
-    let aux;
+    let aux = []
     for(let i=0;i<=this.datos.length;i++){
         if(this.datos[i]!=undefined){
             if(this.datos[i].userId == id){
-                aux += this.datos[i];
+                aux.push(this.datos[i]);
             }
         }
         else{
