@@ -377,7 +377,6 @@ class Post {
     }
    postsUsuario(id){
     let aux;
-    let contador = 0;
     for(let i=0;i<=this.datos.length;i++){
         if(this.datos[i]!=undefined){
             if(this.datos[i].userId == id){
@@ -391,7 +390,6 @@ class Post {
     return aux;
    }
    idPublicacion(identificador){
-    let aux;
     for(let i=0;i<=this.datos.length;i++){
         if(this.datos[i].id == identificador){
             return this.datos[i];

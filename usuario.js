@@ -17,7 +17,7 @@ class Usuario{
         }
         },
         "phone": "1-770-736-8031 x56442",
-        "website": "hildegard.org",
+        "web": "hildegard.org",
         "company": {
         "name": "Romaguera-Crona",
         "catchPhrase": "Multi-layered client-server neural-net",
@@ -40,7 +40,7 @@ class Usuario{
         }
         },
         "phone": "010-692-6593 x09125",
-        "website": "anastasia.net",
+        "web": "anastasia.net",
         "company": {
         "name": "Deckow-Crist",
         "catchPhrase": "Proactive didactic contingency",
@@ -63,7 +63,7 @@ class Usuario{
         }
         },
         "phone": "1-463-123-4447",
-        "website": "ramiro.info",
+        "web": "ramiro.info",
         "company": {
         "name": "Romaguera-Jacobson",
         "catchPhrase": "Face to face bifurcated interface",
@@ -86,7 +86,7 @@ class Usuario{
         }
         },
         "phone": "493-170-9623 x156",
-        "website": "kale.biz",
+        "web": "kale.biz",
         "company": {
         "name": "Robel-Corkery",
         "catchPhrase": "Multi-tiered zero tolerance productivity",
@@ -109,7 +109,7 @@ class Usuario{
         }
         },
         "phone": "(254)954-1289",
-        "website": "demarco.info",
+        "web": "demarco.info",
         "company": {
         "name": "Keebler LLC",
         "catchPhrase": "User-centric fault-tolerant solution",
@@ -132,7 +132,7 @@ class Usuario{
         }
         },
         "phone": "1-477-935-8478 x6430",
-        "website": "ola.org",
+        "web": "ola.org",
         "company": {
         "name": "Considine-Lockman",
         "catchPhrase": "Synchronised bottom-line interface",
@@ -155,7 +155,7 @@ class Usuario{
         }
         },
         "phone": "210.067.6132",
-        "website": "elvis.io",
+        "web": "elvis.io",
         "company": {
         "name": "Johns Group",
         "catchPhrase": "Configurable multimedia task-force",
@@ -163,7 +163,8 @@ class Usuario{
         }
         } ]; 
     }
-    agregarUsuario(nuevo){
+    agregarUsuario(nuevoUser){
+      let nuevo = JSON.parse(nuevoUser);
       nuevo.id = "";
       nuevo.id = Number(this.buscarUltimoId()+1);
       this.datos.push(nuevo);
@@ -201,7 +202,7 @@ class Usuario{
 }
 //Todo esto para probar que ya funciona esta parte del código
 
-let bdUsers = new Usuario();
+/*let bdUsers = new Usuario();
 console.log(bdUsers.datos[1]);
 console.log("El ultimo id es: "+bdUsers.buscarUltimoId());
 let nuevo = {
@@ -231,4 +232,4 @@ bdUsers.agregarUsuario(nuevo);
 console.log("El ultimo id es: "+bdUsers.buscarUltimoId());
 console.log(bdUsers.buscarUsuario("les"));
 console.log(bdUsers.listar());
-
+*/
