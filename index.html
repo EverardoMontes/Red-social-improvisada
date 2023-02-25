@@ -192,6 +192,7 @@
         listUsrSection.classList.add("visually-hidden");
         seeUsrSection.classList.add("visually-hidden");
         usersExistentes.classList.remove("visually-hidden");
+        usersExistentes.innerHTML = '"<option value="">--Elige algún usuario de todos--</option>"';
         let listaUsers = bdUsers.listar();
         listaUsers.forEach(element => {
             usersExistentes.innerHTML+= 
